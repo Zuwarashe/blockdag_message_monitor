@@ -31,4 +31,4 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 ## 🚀 Usage
-python main.py your_logfile.txt
+python main.py blockdag_log.txt
