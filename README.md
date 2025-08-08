@@ -16,7 +16,7 @@ A lightweight Python tool for visualizing information flow in BlockDAG networks.
 ```bash
 # 1. Clone repository
 git clone (https://github.com/Zuwarashe/blockdag_message_monitor/tree/master)
-cd blockdag-monitor
+cd blockdag_message_monitor
 
 # 2. Create virtual environment
 python -m venv venv
