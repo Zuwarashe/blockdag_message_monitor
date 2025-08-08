@@ -29,6 +29,6 @@ source venv/bin/activate
 
 # 4. Install dependencies
 pip install -r requirements.txt
-
+```
 ## 🚀 Usage
 python main.py your_logfile.txt
