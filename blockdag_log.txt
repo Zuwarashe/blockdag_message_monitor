@@ -1,0 +1,72 @@
+# FROM: node-1
+TYPE: BLOCK
+PARENTS: []
+TIMESTAMP: 2025-08-07T09:00:00Z
+PAYLOAD: mint tx { from: A, to: B, amount: 100 }
+---
+# FROM: node-2
+TYPE: BLOCK
+PARENTS: [BDG-001]
+TIMESTAMP: 2025-08-07T09:01:00Z
+PAYLOAD: tx { from: B, to: C, amount: 30 }
+---
+# FROM: node-3
+TYPE: BLOCK
+PARENTS: [BDG-001]
+TIMESTAMP: 2025-08-07T09:01:30Z
+PAYLOAD: tx { from: B, to: D, amount: 20 }
+---
+# FROM: node-4
+TYPE: BLOCK
+PARENTS: [BDG-002, BDG-003]
+TIMESTAMP: 2025-08-07T09:02:00Z
+PAYLOAD: tx { from: C, to: E, amount: 10 }
+---
+# FROM: node-5
+TYPE: BLOCK
+PARENTS: [BDG-003]
+TIMESTAMP: 2025-08-07T09:02:15Z
+PAYLOAD: tx { from: D, to: F, amount: 5 }
+---
+# FROM: node-6
+TYPE: BLOCK
+PARENTS: [BDG-004]
+TIMESTAMP: 2025-08-07T09:03:00Z
+PAYLOAD: tx { from: E, to: G, amount: 3 }
+---
+# FROM: node-7
+TYPE: GOSSIP
+TIMESTAMP: 2025-08-07T09:03:10Z
+PAYLOAD: heard about BDG-004
+---
+# FROM: node-8
+TYPE: GOSSIP
+TIMESTAMP: 2025-08-07T09:03:15Z
+PAYLOAD: heard about BDG-005
+---
+# FROM: node-9
+TYPE: GOSSIP
+TIMESTAMP: 2025-08-07T09:03:20Z
+PAYLOAD: heard about BDG-006
+---
+# FROM: node-10
+TYPE: BLOCK
+PARENTS: [BDG-005, BDG-006]
+TIMESTAMP: 2025-08-07T09:04:00Z
+PAYLOAD: tx { from: F, to: H, amount: 1 }
+---
+# FROM: node-11
+TYPE: GOSSIP
+TIMESTAMP: 2025-08-07T09:04:10Z
+PAYLOAD: heard about BDG-007
+---
+# FROM: node-12
+TYPE: BLOCK
+PARENTS: []
+TIMESTAMP: 2025-08-07T09:05:00Z
+PAYLOAD: mint tx { from: X, to: Y, amount: 50 }
+---
+# FROM: node-13
+TYPE: GOSSIP
+TIMESTAMP: 2025-08-07T09:05:30Z
+PAYLOAD: heard about BDG-008
